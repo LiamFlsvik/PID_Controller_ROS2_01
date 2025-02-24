@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/lhf/ws_mekatronikk/install/pid_controller_msgs/include/**",
+        "/opt/ros/jazzy/include/**",
+        "/home/lhf/ws_mekatronikk/src/joint_simulator/include/**",
+        "/home/lhf/ws_mekatronikk/src/pid_control/include/**",
+        "/home/lhf/ws_mekatronikk/src/pid_controller_msgs/include/**",
+        "/home/lhf/ws_mekatronikk/src/reference_input_node/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

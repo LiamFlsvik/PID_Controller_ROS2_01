@@ -13,11 +13,14 @@ find_package(ament_cmake REQUIRED)
 
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(pid_controller_msgs REQUIRED)
 
 include_directories(include)
+include_directories(launch)
+
 
 add_executable(pid_controller_node src/main.cpp include/pidController.hpp include/PIDNode.hpp)
-ament_target_dependencies(pid_controller_node rclcpp std_msgs)
+ament_target_dependencies(pid_controller_node rclcpp std_msgs pid_controller_msgs)
 
 install(TARGETS
 pid_controller_node
@@ -35,5 +38,10 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
 
 ament_package()
